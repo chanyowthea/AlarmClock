@@ -13,12 +13,17 @@ public class MainActivity extends Activity {
         this.startActivity(intent);
     }
 
-    public void PlayAudio(String audioName)
+    public void Init()
     {
-        MyService.getInstance().CreateTimer();
+
     }
 
-    public void StopAudio()
+    public void AddClock(String title, int type, int day, int hour, int minute, String audioName)
+    {
+        MyService.getInstance().CreateTimer(title, type, day, hour, minute, audioName);
+    }
+
+    public void Clear()
     {
         MyService.getInstance().StopAudio();
     }
